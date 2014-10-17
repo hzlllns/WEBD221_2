@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Calibre';
+  src: url('fonts/CalibreWeb-Regular.eot?67902704');
+  src: url('fonts/CalibreWeb-Regular.eot?67902704#iefix') format('embedded-opentype'),
+       url('fonts/CalibreWeb-Regular.woff?67902704') format('woff'),
+       url('../fonts/calibre_font.ttf') format('truetype'),
+       url('fonts/CalibreWeb-Regular.svg?67902704#Calibre') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plantin';
+  src: url('fonts/plantin.eot?67902704');
+  src: url('fonts/plantin.eot?67902704#iefix') format('embedded-opentype'),
+       url('fonts/plantin.woff?67902704') format('woff'),
+       url('../fonts/plantin_font.ttf') format('truetype'),
+       url('fonts/plantin.svg?67902704#Plantin') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+// GRID VALUES
+//------------------------------------
+// Change this values to change the size of the grid
+
+// 1180px grid width
+@column-width: 58;
+@gutter-width: 44;
+@columns: 12;
+
+// Utility variable — you should never need to modify this
+@gridsystem-width: (@column-width * @columns) + (@gutter-width * @columns) * 1px; // = 1680
+
+// Set @total-width to 100% for a fluid layout
+@total-width: 100%;
+
+// TYPOGRAPHY
+//------------------------------------
+@font-family-sans-serif: 	"Calibre", Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+@font-family-serif: 	 	"Plantin", Baskerville, Georgia, "Times New Roman", serif;
+
+@base-font-size: 1.9rem;
+@lrg-font-size: @base-font-size + 2;
+@sml-font-size: @base-font-size + 0.2;
+@tiny-font-size: @base-font-size / 1.2;
+
+// COLORS
+//------------------------------------
+@grey: 					#555;
+@orange: 				#ef3e6b;
+@white: 				#fff;
+@off-white: 			#f9f9f9;
+@mustard: 				#fcbb00;
+
+@brand-primary: 		@orange;
+@brand-default: 		@grey;
+
+

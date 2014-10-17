@@ -1,0 +1,217 @@
+@import "variables.less";
+@import "mixins.less";
+@font-face { font-family: 'Plantin'; src: url("../fonts/plantin_font.ttf") format('truetype'); }
+
+// CLEARFIX
+//------------------------------------
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img { width: 100%;}
+a {	color:@brand-primary; text-decoration: none; }
+
+// GENERAL
+//------------------------------------
+
+body {
+	font: @base-font-size @font-family-sans-serif;
+  line-height: 26px;
+	background: @off-white;
+	color: @grey;
+	//padding: 0 100px;
+}
+
+h2 {
+  font: 30px/40px @font-family-serif;
+  color: #474747;
+  padding-right: 12.5%;
+}
+
+h3 {
+  font: @sml-font-size @font-family-sans-serif;
+  margin: 0;
+  padding: 12px 0 11px 0;
+  color:#555;
+}
+
+// STRUCTURE ---- Grid layout by Semantic.gs
+//------------------------------------
+
+.container {
+	width: @total-width;
+	max-width: @gridsystem-width;
+	margin: 0 auto;
+	overflow: hidden; // self-clear floated child elements
+}
+
+section {
+	.column(12)
+
+	.intro-blurb {
+		.column(4);
+		float: right;
+	}
+}
+
+aside {
+	.column(4);
+	background: white;
+}
+
+// HEADER
+//------------------------------------
+
+header {
+	.column(12);
+  // height: 58px;
+
+	.logo {	
+		background: transparent url("../img/Studio_Ghibli_logo.svg") no-repeat;
+		width: 240px;
+    height: 60px;
+		text-indent: -1000px;
+		float: left;
+	}
+
+	nav {
+		.column(6);
+		float: right;
+    
+    .selected {
+      color: @white;
+      background-color: @brand-primary;
+    }
+
+			ul {
+			padding: 0;
+			text-align: left;
+
+				li {
+				display: inline;
+				list-style-type: none;
+				margin-right: 10%;
+		    	
+					a {
+						color:#555;
+					}
+				}
+			}
+	}
+}
+
+#intro {
+  clear:both; //clear float of the elements before it
+
+  .oneliner, 
+  .blurb {
+    .column(6);
+  }
+
+  .blurb { margin-bottom: 50px; }
+}
+
+
+// HOME: Features
+//------------------------------------
+
+#features {
+  padding: 0;
+  margin-bottom: 15px;
+  
+  article { padding-bottom: 45px; }
+
+  article.wide {
+    .column(12);
+  }
+    article.half {
+        .column(6);    
+        max-width: 612px;
+        display: inline-block;
+        vertical-align: top;
+          &:first-of-type {
+           clear:both; //clear float of the elements before it
+          }  
+
+          // &:nth-child(even) {
+          //   margin-left: 0;
+          // }
+
+          // &:nth-child(odd) {
+          //   margin-right: 0;
+          // }
+        }
+      
+      p {
+        margin:0;
+        padding: 0;
+        // color: #474747;
+        // font-size: 22px;
+      }
+
+      .caption {
+        font: @sml-font-size @font-family-serif;
+      }
+
+}
+
+// FOOTER
+//------------------------------------
+
+footer {
+	//.column(12);
+  width: 100%;
+  padding: 40px 0;
+	background-color: @mustard;
+  .contact-box {
+    float: left;
+    margin-right: 20px;
+    font-size: @tiny-font-size;
+
+  }
+  a {
+    font-family: @font-family-serif;
+    color: @grey;
+    &:hover {
+      color: @brand-primary;
+    }
+  }
+
+  .social {
+    float: right;
+    a {
+      color: @white;
+      margin-right: 20px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
